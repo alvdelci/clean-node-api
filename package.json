@@ -1,0 +1,17 @@
+{
+  "name": "clean-node-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/alvdelci/clean-node-api.git",
+  "author": "alvdelci <delcimarioalvesdev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.5.0",
+    "standard": "^17.1.2"
+  }
+}
