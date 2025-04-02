@@ -6,7 +6,13 @@
   "author": "alvdelci <delcimarioalvesdev@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll",
+    "test:staged": "jest"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
   },
   "devDependencies": {
     "husky": "^9.1.7",
