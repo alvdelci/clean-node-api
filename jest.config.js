@@ -1,11 +1,12 @@
-import type { Config } from "jest";
+/** @type {import('jest').Config} */
+const config = {
 
-const config: Config = {
   collectCoverage: true,
 
   coverageDirectory: "coverage",
 
   coverageProvider: "v8",
+
 };
 
-export default config;
+module.exports = config;
