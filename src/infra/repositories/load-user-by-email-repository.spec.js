@@ -13,12 +13,12 @@ const makeSut = () => {
 
 describe('LoadUserByEmail Repository', () => {
   beforeAll(async () => {
-    await MongoHelper.connect(process.env.MONGO_URL)
+    await MongoHelper.connect(global.__MONGO_URI__)
     db = await MongoHelper.getDb()
   })
 
   beforeEach(async () => {
-    db.collection('users').deleteMany()
+    await db.collection('users').deleteMany()
   })
 
   afterAll(async () => {
@@ -42,5 +42,11 @@ describe('LoadUserByEmail Repository', () => {
     console.log(user)
 
     expect(user._id).toEqual(fakeUser.insertedId)
+  })
+
+  test('should throw if no userMode is provided', async () => {
+    const sut = new LoadUserByEmailRepository()
+    const promise = sut.load('any_mail@mail.com')
+    expect(promise).rejects.toThrow()
   })
 })
