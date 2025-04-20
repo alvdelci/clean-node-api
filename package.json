@@ -6,11 +6,11 @@
   "author": "alvdelci <delcimarioalvesdev@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest --silent --colors --noStackTrace --passWithNoTests",
+    "test": "jest --colors --noStackTrace --passWithNoTests",
     "test:unit": "npm run test -- --watch -c jest-unit-config.js",
     "test:integration": "npm run test -- --watch -c jest-integration-config.js",
-    "test:staged": "npm run test -- --findRelatedTests",
-    "test:ci": "npm run test -- --coverage"
+    "test:staged": "npm run test -- --findRelatedTests --silent",
+    "test:ci": "npm run test -- --coverage --silent"
   },
   "standard": {
     "env": [
