@@ -1,11 +1,12 @@
 {
   "name": "clean-node-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/main/index.js",
   "repository": "https://github.com/alvdelci/clean-node-api.git",
   "author": "alvdelci <delcimarioalvesdev@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "node src/main/index.js",
     "test": "jest --colors --noStackTrace --passWithNoTests",
     "test:unit": "npm run test -- --watch -c jest-unit-config.js",
     "test:integration": "npm run test -- --watch -c jest-integration-config.js",
@@ -26,6 +27,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.15.0",
     "validator": "^13.15.0"
