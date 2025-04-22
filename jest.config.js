@@ -3,16 +3,16 @@ const config = {
 
   collectCoverage: true,
 
-  coverageDirectory: "coverage",
+  coverageDirectory: 'coverage',
 
-  coverageProvider: "v8",
+  coverageProvider: 'v8',
 
-  collectCoverageFrom: ['**/src/**/*.js'],
+  collectCoverageFrom: ['**/src/**/*.js', '!**/src/main/**'], // garante que todos os arquivos serao cobertos por testes exceto na pasta main
 
   preset: '@shelf/jest-mongodb',
 
-  watchPathIgnorePatterns: ['globalConfig'],
+  watchPathIgnorePatterns: ['globalConfig']
 
-};
+}
 
-module.exports = config;
+module.exports = config
